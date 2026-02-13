@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="" id="favicon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Dailyway</title>
+  </head>
+  <body>
+    <header>
+      <h1>Dailyway</h1>
+      <h2 id="todayDate"></h2>
+    </header>
+
+    <main>
+      <div id="dailyTasks">
+        <h3>Tarefas</h3>
+
+        <div id="tasklist">
+          <input type="checkbox" id="wakeUp" />
+          <label for="wakeUp">Acordar [06:00]</label><br />
+
+          <input type="checkbox" id="study" />
+          <label for="study">Estudar [07:00]</label><br />
+
+          <input type="checkbox" id="gym" />
+          <label for="gym">Treinar [18:00]</label><br />
+
+          <input type="checkbox" id="fourMeals" />
+          <label for="fourMeals">Fazer quatro refeições</label><br />
+        </div>
+
+        <p id="dailyStatus">Status: <span id="status"></span></p>
+
+        <button id="save" onclick="handleSave()">Salvar</button>
+        <button id="submit" onclick="handleSubmit()" disabled>Finalizar</button>
+      </div>
+
+      <div id="dailyStreak">Streak: <span id="streak">0</span></div>
+
+      <div id="backup">
+        <h3>Exportar / Importar</h3>
+
+        <button onclick="exportData()">Exportar dados</button>
+
+        <input
+          type="file"
+          id="importData"
+          accept="application/json"
+          onchange="importData(this.files[0])"
+        />
+      </div>
+    </main>
+  </body>
+</html>

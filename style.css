@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  padding-bottom: 64px;
+}
+
+h1 {
+  font-size: 56px;
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 8px 0 32px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 8px 0 16px;
+}
+
+#streak {
+  font-weight: 700;
+}
+
+#dailyTasks,
+#dailyStreak,
+#backup {
+  width: 100%;
+  max-width: 380px;
+  padding: 16px;
+  margin: 16px;
+  border: 2px solid #000000;
+  border-radius: 6px;
+}
+
+#backup {
+  margin-top: 48px;
+}
+
+#dailyStreak {
+  font-size: 18px;
+}
+
+#dailyStatus {
+  margin-top: 12px;
+  padding: 8px;
+  background-color: #e8ebed;
+  border-radius: 6px;
+}
+
+button,
+#importData {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: #fbfbf8;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e8ebed;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#importData {
+  padding: 6px;
+}
+
+button:focus-visible,
+#importData:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
