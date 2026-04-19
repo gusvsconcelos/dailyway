@@ -38,8 +38,8 @@ function dailyTasks() {
   setStorage("completedTasks", completedTasks);
 
   const requiredTasksByDay = {
-    6: ["wakeUp", "fourMeals", "study"],
-    0: ["wakeUp", "fourMeals"],
+    6: ["task1", "task2", "task3"],
+    0: ["task1", "task2"],
   };
   const requiredTasks = requiredTasksByDay[getDate()] ?? [];
 
